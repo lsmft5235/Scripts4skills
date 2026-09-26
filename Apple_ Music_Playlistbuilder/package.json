@@ -1,0 +1,30 @@
+{
+  "name": "apple-music-playlist-builder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-agent interfaces for building playlists in macOS Music.app",
+  "type": "module",
+  "bin": {
+    "apple-music-playlist": "dist/src/cli.js",
+    "apple-music-playlist-mcp": "dist/src/mcp.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test test/**/*.test.ts",
+    "capabilities": "tsx src/cli.ts capabilities",
+    "mcp": "node dist/src/mcp.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.1.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

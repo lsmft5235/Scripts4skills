@@ -1,0 +1,12 @@
+# Rebuild with `npm ci && npm run build`.
+dist/
+node_modules/
+
+# Local diagnostics and macOS metadata.
+*.log
+.DS_Store
+
+# Private Apple Music metadata archive. Back this up outside Git.
+/data/music-library.sqlite
+/data/music-library.sqlite-shm
+/data/music-library.sqlite-wal

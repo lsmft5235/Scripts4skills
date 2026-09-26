@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "apple-music-playlist-builder": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${workspaceFolder}/Apple_ Music_Playlistbuilder/dist/src/mcp.js"
+      ]
+    }
+  }
+}
