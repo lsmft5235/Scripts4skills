@@ -152,5 +152,6 @@ The first Music operation may trigger a macOS Automation prompt. Allow Bionic, i
 - Search covers tracks already present in the synced Music library, including cloud-only library tracks.
 - Apple Music catalog search and MusicKit authorization are not implemented; only tracks already present in the synced library are eligible.
 - Exact synchronize is deliberately disabled. Music.app does not expose direct track reordering, so delete-and-rebuild behavior must pass an opt-in temporary-playlist test first.
-- Create has been exercised successfully against Music.app. Append has unit coverage but has not been live-tested against the real library.
+- Create and append were both live-tested against Music.app; append was tested by adding tracks to `AAAA_TEST`.
+- Skipping tracks already present by persistent ID has unit coverage; that duplicate case has not been separately live-tested.
 - `npm test` is isolated and never mutates the real Music library. There is currently no automated live-test flag; live mutation verification is manual and requires explicit approval.
